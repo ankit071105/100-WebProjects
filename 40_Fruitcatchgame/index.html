@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Catch The Fruits</title>
+  </head>
+  <body>
+    <div class="screen">
+      <h1>Catch The Fruits</h1>
+      <button class="btn" id="start-btn">Play Game</button>
+    </div>
+    <div class="screen">
+      <h1>What is your "favorite" Fruits?</h1>
+      <ul class="insects-list">
+        <li>
+          <button class="choose-insect-btn">
+            <p>Apple</p>
+            <img
+              src="https://png.pngtree.com/png-vector/20231017/ourmid/pngtree-fresh-apple-fruit-red-png-image_10203073.png"
+              alt="Apple"
+            />
+          </button>
+        </li>
+        <li>
+          <button class="choose-insect-btn">
+            <p>banana </p>
+            <img
+              src="https://pngimg.com/d/banana_PNG842.png"
+              alt="banana"
+            />
+          </button>
+        </li>
+        <li>
+          <button class="choose-insect-btn">
+            <p>Orange</p>
+            <img
+              src="2.png"
+              alt="Orange"
+            />
+          </button>
+        </li>
+        <li>
+          <button class="choose-insect-btn">
+            <p>PineApple</p>
+            <img
+              src="1.png"
+              alt="PineApple"
+            />
+          </button>
+        </li>
+      </ul>
+    </div>
+    <div class="screen game-container" id="game-container">
+      <h3 id="time" class="time">Time: 00:00</h3>
+      <h3 id="score" class="score">Score: 0</h3>
+      <h5 id="message" class="message">
+        Are you annoyed yet? <br />
+        You are playing an impossible game!!
+      </h5>
+    </div>
+    <div id="final-score" class="final-score">
+      <h1>Game Over!</h1>
+      <h3>Your final score is: <span id="final-score-value"></span></h3>
+    </div>
+    <script>
+      const screens = document.querySelectorAll(".screen");
+      const chooseInsectButtons = document.querySelectorAll(".choose-insect-btn");
+      const startButton = document.getElementById("start-btn");
+      const gameContainer = document.getElementById("game-container");
+      const timeElement = document.getElementById("time");
+      const scoreElement = document.getElementById("score");
+      const message = document.getElementById("message");
+      const finalScoreContainer = document.getElementById("final-score");
+      const finalScoreValue = document.getElementById("final-score-value");
+      let seconds = 0;
+      let score = 0;
+      let selectedInsect = {};
+      let gameRunning = false;
+
+      startButton.addEventListener("click", () => screens[0].classList.add("up"));
+
+      const increaseScore = () => {
+        if (!gameRunning) return;
+        score++;
+        if (score > 19) message.classList.add("visible");
+        scoreElement.innerHTML = `Score: ${score}`;
+      };
+
+      const addInsects = () => {
+        if (!gameRunning) return;
+        setTimeout(createInsect, 1000);
+        setTimeout(createInsect, 1500);
+      };
+
+      const catchInsect = function () {
+        if (!gameRunning) return;
+        increaseScore();
+        this.classList.add("caught");
+        setTimeout(() => this.remove(), 2000);
+        addInsects();
+      };
+
+      const getRandomLocation = () => {
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+        const x = Math.random() * (width - 200) + 100;
+        const y = Math.random() * (height - 200) + 100;
+        return { x, y };
+      };
+
+      const createInsect = () => {
+        if (!gameRunning) return;
+        const insect = document.createElement("div");
+        insect.classList.add("insect");
+        const { x, y } = getRandomLocation();
+        insect.style.top = `${y}px`;
+        insect.style.left = `${x}px`;
+        insect.innerHTML = `<img src="${selectedInsect.src}" 
+        alt="${selectedInsect.alt}" 
+        style="transform: rotate(${Math.random() * 360}deg)" />`;
+        insect.addEventListener("click", catchInsect);
+        gameContainer.appendChild(insect);
+      };
+
+      const increaseTime = () => {
+        if (!gameRunning) return;
+        let m = Math.floor(seconds / 60);
+        let s = seconds % 60;
+        m = m < 10 ? `0${m}` : m;
+        s = s < 10 ? `0${s}` : s;
+        timeElement.innerHTML = `Time: ${m}:${s}`;
+        seconds++;
+      };
+
+      const startGame = () => {
+        gameRunning = true;
+        setInterval(increaseTime, 1000);
+        setTimeout(stopGame, 30000); 
+      };
+
+      const stopGame = () => {
+        gameRunning = false;
+        finalScoreValue.innerHTML = score;
+        finalScoreContainer.classList.add("visible");
+      };
+
+      chooseInsectButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const image = button.querySelector("img");
+          const src = image.getAttribute("src");
+          const alt = image.getAttribute("alt");
+          selectedInsect = { src, alt };
+          screens[1].classList.add("up");
+          setTimeout(createInsect, 1000);
+          startGame();
+        });
+      });
+    </script>
+  </body>
+</html>
