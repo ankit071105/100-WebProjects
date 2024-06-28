@@ -1,0 +1,124 @@
+.topnav {
+    background-color: #125d85;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .topnav a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 27px;
+  }
+  .topnav a:hover {
+    background-color: #ddd;
+    color: rgb(0, 0, 0);
+    font-size: 37px;
+  }
+  .topnav a.active {
+    background-color: #0e296b;
+    color: white;
+  }
+  @media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+
+body{
+background: url(mac.png);
+/* background-position: center; */
+background-size: cover;
+width: 100%;
+}
+h5{
+    font-size: 22px;
+
+}
+h3{
+    font-size: 23px; 
+
+    
+}
+h2{
+    font-size: 28px;
+
+
+}
+h1{
+    font-size: 4rem;
+    background: #41578e;
+    color: aliceblue;
+    padding: 30px;
+    box-shadow:50px 30px  rgb(190, 229, 249);
+}
+
+  @media screen and (max-width: 300px) {
+   img{
+    width: 200px;
+   }
+  }
+  button{
+    border-radius:50px;
+    width:180px;
+    height: 120px;
+    margin-left: 120px;
+    background-color: darkblue;
+    margin-top: 70px;
+  }
+  .process{
+    color: whitesmoke;
+    font-size: 17px;
+    padding: 20px;
+    text-align: center;
+  }
+  .my{
+    background-color: #81116a;
+    color: whitesmoke;
+    padding: 30px;  
+    font-style: oblique;
+    font-weight: bolder;
+      /* box-shadow:70px 50px rgb(241, 224, 255); */
+margin-bottom:100px ;
+ 
+    margin-top: 20px;
+  }
+  button:hover{
+    background: black;
+  }
+  .process:hover{
+    color: rgb(168, 213, 252);
+  }
+  img{
+    width: 200px;
+    margin-right: 60px;
+
+  }
+  .ok{
+    display: flex;
+    justify-content: center;
+    background: #7ff1e6;
+    width: 100%;
+    /* box-shadow:70px 50px  rgb(48, 6, 62); */
+  }
+  .kk{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+
+  }
+  .insta{
+    font-size: 20px;
+  }
+  footer{
+    background: rgb(114, 142, 218);
+  }
+  h4{
+    text-align: center;
+    font-size: 27px;
+    padding-bottom: 20px;
+  }
