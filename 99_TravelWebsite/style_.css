@@ -1,0 +1,499 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
+/* Google Fonts */
+body {
+  background-image: url("./img/feedback_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  /*background: linear-gradient(to right, #4DA0B0, #fff);*/
+  font-family: "Arial", sans-serif;
+}
+
+.feedback-heading {
+  font-size: 3rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+}
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.glassmorphism-container {
+  background: rgba(46, 123, 225, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  max-width: 800px;
+  width: 90%;
+  margin-bottom: 20px;
+  margin-top: 100px;
+}
+p {
+  line-height: 1.2em;
+  margin: 0;
+  font-family: "Lato";
+  font-size: 26px;
+  color: #07147a;
+  padding: 8px 5px;
+  text-align: center;
+  text-rendering: optimizeLegibility;
+  text-shadow: 1px 1px 0 #29c0e6, 1px 2px 0px #e784c6;
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.star {
+  color: #eae3be;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.star:hover {
+  color: #ffa500;
+}
+
+#rating-text {
+  font-family: monospace;
+  margin-top: 40px;
+  font-size: 1.8rem;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+}
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* Feedback input box and submit button styles */
+.feedback-container {
+  margin-top: 20px;
+}
+
+#feedback-input {
+  width: 90%;
+  height: 80px;
+  resize: vertical;
+  margin-bottom: 20px;
+  padding: 8px;
+  border: 1.5px solid #5468ff;
+  border-radius: 5px;
+  background-color: rgba(219, 230, 240, 0.402);
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+/*.submit-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: rgba(7,90,166,255);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.submit-button:hover {
+  background: #357c8e;
+}
+
+.button-36-container {
+  margin-top: 20px;
+}
+
+.button-36-container a {
+  text-decoration: none;
+}
+
+.button-36 {
+  display: inline-block;
+  padding: 10px 20px;
+  background: rgba(7,90,166,255);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.button-36:hover {
+  background: #357c8e;
+}*/
+
+@media (max-width: 768px) {
+  .container {
+    width: 80%;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: 90%;
+  }
+}
+
+
+/*New toggle*/
+/* new toggle start */
+.toggle-container {
+  --size: 2rem;
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+  margin-right: 71px;
+}
+
+.toggle {
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset calc(var(--size) * 0.33) calc(var(--size) * -0.25) 0;
+  border-radius: 999px;
+  color: hsl(240, 100%, 95%);
+  transition: all 500ms;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  &:checked {
+    --ray-size: calc(var(--size) * -0.4);
+    --offset-orthogonal: calc(var(--size) * 0.65);
+    --offset-diagonal: calc(var(--size) * 0.45);
+    transform: scale(0.75);
+    color: hsl(40, 100%, 50%);
+    box-shadow: inset 0 0 0 var(--size),
+      calc(var(--offset-orthogonal) * -1) 0 0 var(--ray-size),
+      var(--offset-orthogonal) 0 0 var(--ray-size),
+      0 calc(var(--offset-orthogonal) * -1) 0 var(--ray-size),
+      0 var(--offset-orthogonal) 0 var(--ray-size),
+      calc(var(--offset-diagonal) * -1) calc(var(--offset-diagonal) * -1) 0
+        var(--ray-size),
+      var(--offset-diagonal) var(--offset-diagonal) 0 var(--ray-size),
+      calc(var(--offset-diagonal) * -1) var(--offset-diagonal) 0 var(--ray-size),
+      var(--offset-diagonal) calc(var(--offset-diagonal) * -1) 0 var(--ray-size);
+  }
+}
+
+/* Apply fade-down animation to the toggle container */
+.toggle-container[data-aos='fade-down'] {
+  transition: opacity 500ms ease-in-out;
+  opacity: 1;
+}
+
+.toggle-container[data-aos='fade-down'].aos-animate {
+  opacity: 1;
+}
+
+/* New NAvbar CSS Starts Here*/
+
+
+nav {
+  background-color: #091020;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1001;
+}
+
+.nav__logo {
+  font-size: 1.8rem;
+  /* Increased font size for the logo */
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
+  /* border: 2px solid white; */
+  text-decoration: none;
+}
+
+.nav__logo span {
+  color: #3685fb;
+  /* Assuming this is your primary color */
+}
+
+
+.link a {
+  /* padding: 0.5rem 1rem; Adjusted padding for links */
+  color: #ffffff;
+  transition: 0.3s;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.link a:hover {
+  color: #ff0000;
+}
+
+
+header {
+  background-color: var(--secondary-color);
+}
+
+
+.nav-container {
+  height: auto;
+  width: 200%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  z-index: 9999;
+  
+}
+
+.newNav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  height: auto;
+  width: 100%;
+  padding: 1rem 2rem;
+}
+
+.navLinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  list-style: none;
+  gap: 1.2rem;
+  position: relative;
+  z-index: 10;
+  margin-right: 20px;
+
+}
+
+.link a {
+  position: relative;
+  list-style: none;
+}
+
+.link a::before {
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 0%;
+  bottom: -5px;
+  left: 0;
+  background-color: red;
+}
+
+.link a::after {
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 0%;
+  top: -5px;
+  right: 0;
+  background-color: red;
+  transition: all 0.2s ease-in-out;
+}
+
+.link a:hover::before {
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+.link a:hover::after {
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+
+.hamburger {
+  height: 2rem;
+  width: 1.7rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  display: none;
+  transition: 0.2s;
+}
+
+.line {
+  height: 5px;
+  width: 100%;
+  background-color: white;
+  border-radius: 2px;
+}
+
+@media screen and (max-width: 1220px) {
+  .hamburger {
+    display: flex;
+    cursor: pointer;
+  }
+
+  .navLinks {
+    position: absolute;
+    top: 70px;
+    background-color: #091020;
+    width: 0%;
+    left: 0;
+    height: 100vh;
+    padding: 2rem 0;
+    flex-direction: column;
+    transition: 0.2s;
+    overflow: hidden;
+  }
+
+  .navLinks li {
+    width: 100%;
+    padding: 0.5rem 0;
+    background-color: #1f2532;
+    z-index: 10;
+  }
+
+  #toggle {
+    font-size: 0.6rem;
+  }
+
+  #btn-style {
+    font-size: 0.6rem;
+  }
+}
+
+.navLinks.activeHamburger {
+  width: 100%;
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 50px;
+  transition: all .4s ease-in-out;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: auto;
+  background-color: transparent;
+  border: 2px solid slateblue;
+  color: red;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 2px;
+  vertical-align: middle;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.btn:hover {
+  background-color: #ff0000; 
+  border-color: #ff0000;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn:hover {
+  filter: brightness(1.5);
+}
+
+
+/* New NAvbar CSS Ends Here*/
+
+/* CSS */
+.button {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(
+    100% 100% at 100% 0,
+    #5adaff 0,
+    #5468ff 100%
+  );
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  height: 40px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
+}
+
+.button:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.button:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
