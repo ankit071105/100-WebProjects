@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #162348;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 50px;
+  }
+  body:hover{
+background-color: rgb(47, 6, 47);
+color: #ffffff;
+  }
+  h1{
+    font-size: 48px;
+    text-align: center;
+    border-bottom: 10px double whitesmoke;
+    display: inline;
+    margin-left: 40%;
+    color: #93faf1;
+    box-shadow: 0 20 30px rgba(30, 2, 59, 0.1);
+
+  }
+  .calculator {
+ 
+margin-top: 50px;
+    background-color: #93d1fa;
+    border-radius: 8px;
+    box-shadow: 0 20 30px rgba(30, 2, 59, 0.1);
+    padding: 20px;
+  }
+  .calculator:hover{
+    background-color: rgb(4, 126, 232);
+    color: whitesmoke;
+  }
+  #display {
+    width: calc(100% - 40px);
+    margin-bottom: 10px;
+    padding: 10px;
+    box-shadow: 0 20 30px rgba(30, 2, 59, 0.1);
+    font-size: 28px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+ 
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+  }
+  
+  button {
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.9s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #0a2e5f;
+    color: whitesmoke;
+  }
+  /* Footer Styles */
+footer {
+    background-color: #7d0c1b;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 100px;
+  }
+  footer:hover{
+    background-color: #09214f;
+    color: palegreen;
+  }
+  .social-media {
+    margin-bottom: 20px;
+  }
+  
+  .social-link {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 10px;
+    background-color: #fff;
+    color: #333;
+    border-radius: 50%;
+    font-size: 20px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .social-link:hover {
+    background-color: #4267B2; /* Change to desired color for Facebook */
+    color: #fff;
+  }
+  
+  .social-link i {
+    vertical-align: middle;
+  }
+  
+  .designed-by p {
+    font-size: 14px;
+    margin: 0;
+  }
+  .social-links{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 10px;
+    background-color: #fff;
+    color: #333;
+    border-radius: 50%;
+    font-size: 20px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .social-links:hover{
+    background: black;
+    color: whitesmoke;
+  }

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+    <h1>Calculator</h1>
+    <br><br>
+  <div class="calculator">
+    <input type="text" id="display" disabled>
+    <div class="buttons">
+      <button onclick="clearDisplay()">C</button>
+      <button onclick="appendToDisplay('%')">%</button>
+      <button onclick="appendToDisplay('**2')">x<sup>2</sup></button>
+      <button onclick="appendToDisplay('**3')">x<sup>3</sup></button>
+      <button onclick="appendToDisplay('**')">^</button>
+      <button onclick="appendToDisplay('Math.sqrt(')">√</button>
+      <button onclick="appendToDisplay('Math.cbrt(')">3√</button>
+      <button onclick="appendToDisplay('(')">(</button>
+      <button onclick="appendToDisplay(')')">)</button>
+      <button onclick="appendToDisplay('Math.sin(')">sin</button>
+      <button onclick="appendToDisplay('Math.cos(')">cos</button>
+      <button onclick="appendToDisplay('Math.tan(')">tan</button>
+      <button onclick="appendToDisplay('/')">÷</button>
+      <button onclick="appendToDisplay('7')">7</button>
+      <button onclick="appendToDisplay('8')">8</button>
+      <button onclick="appendToDisplay('9')">9</button>
+      <button onclick="appendToDisplay('*')">x</button>
+      <button onclick="appendToDisplay('4')">4</button>
+      <button onclick="appendToDisplay('5')">5</button>
+      <button onclick="appendToDisplay('6')">6</button>
+      <button onclick="appendToDisplay('-')">-</button>
+      <button onclick="appendToDisplay('1')">1</button>
+      <button onclick="appendToDisplay('2')">2</button>
+      <button onclick="appendToDisplay('3')">3</button>
+      <button onclick="appendToDisplay('+')">+</button>
+      <button onclick="appendToDisplay('0')">0</button>
+      <button onclick="calculate()">=</button>
+    </div>
+  </div>
+  <footer>
+    <div class="social-media">
+      <a href="https://www.facebook.com/profile.php?id=100055383093406" class="social-link facebook"><i class="fab fa-facebook"></i></a>
+      <a href="https://twitter.com/AnkitKumar63433" class="social-link twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://github.com/ankit071105" class="social-links instagram"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/ankit-kumar-01a52827b/" class="social-link linkedin"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <div class="designed-by">
+      <p>Designed by Ankit &copy; 2024</p>
+    </div>
+  </footer>
+  <script src="index.js"></script>
+</body>
+</html>

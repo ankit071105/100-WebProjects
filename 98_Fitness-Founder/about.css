@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #02081d;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+header img {
+    width: 150px;
+    height: auto;
+    border-radius: 20%;
+    border: 12px solid rgb(138, 135, 135);
+}
+
+.topnav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #333;
+}
+
+.topnav a {
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #555;
+}
+
+.about-container {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 300px;
+    margin: 20px;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 20%;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.about-text {
+    flex: 2;
+    max-width: 600px;
+    color: #fff;
+    margin: 20px;
+}
+
+footer {
+    background-color: #333;
+    padding: 20px 0;
+    color: #fff;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.footer-section {
+    margin: 10px 20px;
+    color: #fff;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image {
+        display: none; /* Hide the image on smaller screens */
+    }
+
+    .about-text {
+        max-width: 100%;
+    }
+
+    .topnav a {
+        padding: 10px;
+        font-size: 15px;
+    }
+}

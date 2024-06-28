@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login or Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="image-box">
+            <img src="https://ideogram.ai/assets/image/balanced/response/bj8f44v0SXSW6hTPHSJtpg" alt="Instagram Image">
+        </div>
+        <div class="form-box">
+            <div class="form-content" id="login-content">
+                <h1>Login</h1>
+                <form id="loginForm">
+                    <div class="textbox">
+                        <input type="text" placeholder="Username" name="username" required>
+                    </div>
+                    <div class="textbox">
+                        <input type="password" placeholder="Password" name="password" required>
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                </form>
+                <p class="switch-form">Don't have an account? <a href="#" id="showSignUp">Sign Up</a></p>
+            </div>
+            <div class="form-content" id="signup-content" style="display: none;">
+                <h1>Sign Up</h1>
+                <form id="signupForm">
+                    <div class="textbox">
+                        <input type="text" placeholder="Username" name="username" required>
+                    </div>
+                    <div class="textbox">
+                        <input type="email" placeholder="Email" name="email" required>
+                    </div>
+                    <div class="textbox">
+                        <input type="password" placeholder="Password" name="password" required>
+                    </div>
+                    <button type="submit" class="btn">Sign Up</button>
+                </form>
+                <p class="switch-form">Already have an account? <a href="#" id="showLogin">Login</a></p>
+            </div>
+        </div>
+    </div>
+  
+    <script src="script.js"></script>
+</body>
+</html>
