@@ -1,0 +1,57 @@
+
+
+h1 {
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+	margin-top: 40px;
+	font-weight: lighter;
+}
+
+.title2 {
+	font-family: 'Montserrat', sans-serif;
+	margin-left: 30px;
+	margin-right: 30px;
+	margin-top: 50px;
+	font-weight: lighter;
+	color: white;
+	font-size: 16px;
+	line-height: 1.5;
+	letter-spacing: 1px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* to align the images for newsroom in same line */
+.column3 {
+  float: left;
+  width: 33.33%;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clearfix (clear floats) */
+.row3::after {
+  content: "";
+  clear: both;
+  display: table; 
+}
+
+/* to create the text formats under the images for newsroom */
+.content3 {
+  position: relative;
+  bottom: -10px;
+  /*background-color: #ffba08; /* Fallback color */
+  /*background: rgba(255, 255, 0, 0.2); /* Black opacity */
+  width: 100%;
+  padding: 3px 6px;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 1px;
+  color: #fff;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+
+
