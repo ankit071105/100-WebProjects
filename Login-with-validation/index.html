@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="https://ideogram.ai/assets/progressive-image/balanced/response/KS2Gvl7ES8eZnTCfUOEVQA" />
+    <title>Our App | Sign Up</title>
+  </head>
+  <body>
+    <div id="left">
+      <div class="logo">
+        <img src="https://ideogram.ai/assets/progressive-image/balanced/response/KS2Gvl7ES8eZnTCfUOEVQA" alt="logo" />
+        Our App
+      </div>
+      <div class="sign-up">
+        <h3>Sign Up</h3>
+        <form>
+          <div class="form-field">
+            <span class="material-symbols-outlined"> mail </span>
+            <input type="email" placeholder="Your email" required />
+          </div>
+          <div class="form-field">
+            <span class="material-symbols-outlined"> lock </span>
+
+            <input
+              type="password"
+              id="password"
+              placeholder="Password"
+              required
+            />
+            <span
+              class="material-symbols-outlined eye-icon"
+              onclick="togglePasswordVisibility()"
+            >
+              visibility
+            </span>
+          </div>
+
+          <div id="pass-meter">
+            <span id="meter-outer">
+              <span id="meter-inner"></span>
+            </span>
+
+            <span id="pwd-desc"></span>
+          </div>
+
+          <button type="submit">Sign Up</button>
+        </form>
+
+        <a href="#">Forgot password?</a>
+
+        <div id="divider">
+          <div></div>
+          <span id="divider-text"> or </span>
+          <div></div>
+        </div>
+
+        <div id="auth-btns">
+          <img src="images/google-btn.svg" alt="Google Sign Up" />
+          <img src="images/facebook-btn.svg" alt="Facebook Sign Up" />
+        </div>
+      </div>
+    </div>
+
+    <div id="right"></div>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
