@@ -1,0 +1,224 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #216969 !important;
+}
+
+nav {
+    background-color: #20114c;
+    color: #fff;
+    padding: 1em 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin: 20px 0 10px;
+}
+
+input[type="color"],
+input[type="range"] {
+    padding: 0px;
+    width: 300px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+#gradientBoxContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.gradientBox {
+    width: 150px;
+    height: 100px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+}
+
+#gradientResult {
+    margin-top: 20px;
+    width: 100%;
+    height: 150px;
+    border: 1px solid #ddd;
+}
+
+#cssCode {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #c1fffe;
+    border: 1px solid #ddd;
+}
+
+footer {
+    background-color: #20114c;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    
+    width: 100%;
+    bottom: 0;
+}
+
+body, h1, h2, div, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+button {
+    background-color: #050653;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#colorResults {
+    margin-top: 20px;
+}
+
+#colorResults h2 {
+    margin-bottom: 15px;
+    text-align: center;
+    color: #333;
+}
+
+#colorResults div {
+    background-color: #e9ecef;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+#colorResults div:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+#rgbResult {
+    color: #ff0000; 
+    font-weight: bolder;
+}
+
+#hslResult {
+    color: #a0e521;     font-weight: bolder;
+}
+
+#hexResult {
+    color: #0000ff;    font-weight: bolder;
+}
+
+#cmykResult {
+    color: #ff00ff;     font-weight: bolder;
+}
+
+#hwbResult {
+    color: #1096cb;    font-weight: bolder;
+}
+
+#ncolResult {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    text-align: center;
+
+    color: #333;
+   
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #010f39;
+    color: #fff;
+
+    bottom: 0;
+    width: 100%;
+}
+#rgbResult::before {
+    content: "RGB: ";
+}
+
+#hslResult::before {
+    content: "HSL: ";
+}
+
+#hexResult::before {
+    content: "HEX: ";
+}
+
+#cmykResult::before {
+    content: "CMYK: ";
+}
+
+#hwbResult::before {
+    content: "HWB: ";
+}
+
+#ncolResult {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    text-align: center;
+    line-height: 30px;
+    color: #333;
+}

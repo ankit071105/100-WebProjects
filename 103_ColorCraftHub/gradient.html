@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Craft Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Color Calculator</a></li>
+            <li><a href="gradient.html">Gradient Generator</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Gradient Generator</h1>
+        <label for="color1">Choose First Color:</label>
+        <input type="color" id="color1">
+        <label for="color2">Choose Second Color:</label>
+        <input type="color" id="color2" >
+        <label for="percentage">Select Percentage:</label>
+        <input type="range" id="percentage" min="0" max="100" value="50">
+        <span id="percentageValue">50%</span>
+        <button onclick="generateGradient()">Generate</button>
+
+        <div id="gradientBoxContainer">
+            <div class="gradientBox" onclick="showCSS('to top')">Top</div>
+            <div class="gradientBox" onclick="showCSS('to bottom')">Bottom</div>
+            <div class="gradientBox" onclick="showCSS('to left')">Left</div>
+            <div class="gradientBox" onclick="showCSS('to right')">Right</div>
+            <div class="gradientBox" onclick="showCSS('to top left')">Top Left</div>
+            <div class="gradientBox" onclick="showCSS('to top right')">Top Right</div>
+            <div class="gradientBox" onclick="showCSS('to bottom left')">Bottom Left</div>
+            <div class="gradientBox" onclick="showCSS('to bottom right')">Bottom Right</div>
+        </div>
+
+        <div id="gradientResult"></div>
+        <div id="cssCode" style="font-size: 21px;"></div>
+    </main>
+
+    <footer>
+        <p>Designed by Ankit</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

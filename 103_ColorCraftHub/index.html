@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Craf Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Color Calculator</a></li>
+            <li><a href="gradient.html">Gradient Generator</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Color Calculator</h1>
+        <label for="colorInput">Enter Color:</label>
+        <input type="color" id="colorInput">
+        <button onclick="calculateColors()">Calculate</button>
+        
+        <div id="colorResults">
+            <h2>Color Representations</h2>
+            <div id="rgbResult"> rgb(0, 0, 0)</div>
+            <div id="hslResult"> hsl(0, 0%, 0%)</div>
+            <div id="hexResult"> #000000</div>
+            <div id="cmykResult"> cmyk(0%, 0%, 0%, 100%)</div>
+            <div id="hwbResult"> hwb(0, 0%, 0%)</div>
+            <div id="ncolResult">: <span id="ncolValue">Value</span></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Designed by Ankit</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
