@@ -13,12 +13,12 @@
 
 :root {
  
-    --white-color: #7cf0e5;
-    --shadow-color: rgba(158, 209, 48, 0.975);
-    --bg-color: #2c0152;
-    --text-color: #e3d9f5;
-    --main-color: #f04b0f;
-    --shadow-color: rgb(28, 140, 150);
+    --white-color: #9553d7;
+    --shadow-color: rgba(88, 121, 18, 0.975);
+    --bg-color: #b2e428;
+    --text-color: #d2c3f2;
+    --main-color: #f00f1a;
+    --shadow-color: rgb(204, 241, 245);
 }
 
 *::selection {
@@ -27,10 +27,10 @@
 }
 
 .dark-mode {
-    --bg-color: #445c79;
-    --text-color: #ffdaec;
-    --main-color: #dc152f;
-    --white-color: #cae3ef;
+    --bg-color: #7d0256;
+    --text-color: #beedf8;
+    --main-color: #1cac55;
+    --white-color: #4a6aca;
     --shadow-color: rgb(52, 9, 78);
 }
 
