@@ -15,8 +15,8 @@
  
     --white-color: #9553d7;
     --shadow-color: rgba(88, 121, 18, 0.975);
-    --bg-color: #b2e428;
-    --text-color: #d2c3f2;
+    --bg-color: #d4e428;
+    --text-color: #2c27c3;
     --main-color: #f00f1a;
     --shadow-color: rgb(204, 241, 245);
 }
@@ -28,10 +28,10 @@
 
 .dark-mode {
     --bg-color: #7d0256;
-    --text-color: #beedf8;
-    --main-color: #1cac55;
+    --text-color: #a6e6f5;
+    --main-color: #2ae943;
     --white-color: #4a6aca;
-    --shadow-color: rgb(52, 9, 78);
+    --shadow-color: rgb(4, 56, 29);
 }
 
 html {
@@ -40,7 +40,7 @@ html {
 }
 
 body {
-    background: var(--bg-color);
+
     color: var(--text-color);
 }
 
@@ -58,7 +58,7 @@ body {
 }
 
 .header.sticky {
-    background: var(--bg-color);
+    background: var(--white-color) ;
     box-shadow: 0 .1rem 1rem var(--shadow-color);
 }
 
@@ -73,6 +73,7 @@ body {
     position: relative;
     font-size: 1.7rem;
     color: var(--white-color);
+    
     font-weight: 500;
     margin-right: 3.5rem;
 }
