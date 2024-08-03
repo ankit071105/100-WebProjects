@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume AI Detector</title>
+</head>
+<body>
+    <h1 style="text-align: center; font-size: 2rem;">Resume AI Detector</h1>
+<div class="my" style="display: flex; justify-content: center;">
+    <input type="file" id="resumeFile" accept=".pdf,.docx" style="width: 100px; height: 40px; background: palegoldenrod;margin-right: 20px; padding: 20px;">
+    <button onclick="uploadResume()" style="width: 100px; height: 40px; background: blueviolet; color: aliceblue; border-radius: 20px; width: 100px; height: 80px;">Upload and Analyze</button>
+
+    
+</div>
+<div class="my" style="text-align: center; font-size: 2rem;">
+    <div id="result"></div>
+
+</div>
+    <script>
+        async function uploadResume() {
+            const fileInput = document.getElementById('resumeFile');
+            const file = fileInput.files[0];
+
+            if (!file) {
+                alert('Please select a file.');
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('resume', file);
+
+            try {
+                const response = await fetch('http://127.0.0.1:5000/upload', {
+                    method: 'POST',
+                    body: formData,
+                });
+
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+
+                const result = await response.json();
+                document.getElementById('result').innerHTML = `
+                    <h2>Analysis Results:</h2>
+                    <p>AI Content: ${result.aiContent}%</p>
+                    <p>Self Content: ${result.selfContent}%</p>
+                `;
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred during the upload. Please try again.');
+            }
+        }
+    </script>
+</body>
+</html>
